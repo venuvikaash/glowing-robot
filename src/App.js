@@ -12,6 +12,7 @@ function App() {
         <div className="d-flex flex-column mx-5">
             <Accesories />
             <Styles />
+            
         </div>
       </div>
     </div>
