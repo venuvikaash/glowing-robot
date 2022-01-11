@@ -1,11 +1,13 @@
 import React from 'react';
-import { Image } from 'react-bootstrap';
+// import { Image } from 'react-bootstrap';
+import One from '../../assets/images/ears/default.png';
 
-export default function Ears (types) {
+export default function Ears ({types}) {
+    // const earType = types;
     const ears = [
         {
             type: "1",
-            image: require('../../assets/images/ears/default.png')
+            image: One
         },
         {
             type: "2",
@@ -16,10 +18,10 @@ export default function Ears (types) {
             image: require('../../assets/images/ears/tilt-forward.png')
         },
     ];
-    return(
-        ears.map((item) => {
-            if(types === 1)
-                <Image image={item.image} key="id" />
-        })
+
+    return(    
+        ears.map(({item}) => (
+            <img src={item.image} key={item.type} alt='' />
+        ))
     )
 }
