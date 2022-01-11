@@ -1,21 +1,19 @@
-import './App.css';
+import React from "react";
+import Accesories from "./components/accesories";
+import Styles from './components/style'
+import './App.scss';
+import Design from './components/design';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="d-flex flex-row">
+        <Design />
+        <div className="d-flex flex-column mx-5">
+            <Accesories />
+            <Styles />
+        </div>
+      </div>
     </div>
   );
 }
