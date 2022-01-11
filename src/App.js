@@ -3,7 +3,6 @@ import Accesories from "./components/accesories";
 import Styles from './components/style'
 import './App.scss';
 import Design from './components/design';
-import Ears from "./components/functions/ears";
 
 function App() {
   return (
