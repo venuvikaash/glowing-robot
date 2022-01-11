@@ -56,3 +56,21 @@ body{
   height: 500px;
   width: 500px;
 }
+
+.tiltBackward{
+  position: relative;
+  right: 28rem;
+  bottom: 46rem;
+}
+
+.tiltForward{
+  position: relative;
+  bottom: 91rem;
+  right: 28rem;
+}
+
+.tiltDefault{
+  position: relative;
+  right: 28rem;
+  bottom: 1rem
+}

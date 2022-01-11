@@ -1,27 +1,32 @@
 import React from 'react';
 // import { Image } from 'react-bootstrap';
 import One from '../../assets/images/ears/default.png';
+import Three from '../../assets/images/ears/tilt-forward.png';
+import Two from '../../assets/images/ears/tilt-backward.png';
 
 export default function Ears ({types}) {
     // const earType = types;
     const ears = [
         {
-            type: "1",
-            image: One
+            id: "1",
+            src: One,
+            className:"tiltDefault"
         },
         {
-            type: "2",
-            image: require('../../assets/images/ears/tilt-backward.png')
+            id: "2",
+            src: Two,
+            className: "tiltBackward"
         },
         {
-            type: "3",
-            image: require('../../assets/images/ears/tilt-forward.png')
+            id: "3",
+            src: Three,
+            className: "tiltForward"
         },
     ];
-
+    console.log('image type',types)
     return(    
-        ears.map(({item}) => (
-            <img src={item.image} key={item.type} alt='' />
+        ears.map(({id,src,className}) => (
+            <img src={src} key={types} alt='' className={className} />
         ))
     )
 }
